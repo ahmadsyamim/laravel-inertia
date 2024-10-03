@@ -1,3 +1,4 @@
+import { User } from '@/types';
 import { Link } from '@inertiajs/react';
 import {
   Button,
@@ -7,7 +8,13 @@ import {
 } from '@material-tailwind/react';
 import React from 'react';
 
-export default function NavBar({ auth }) {
+export default function NavBar({
+  auth,
+}: {
+  auth: {
+    user: User;
+  };
+}) {
   const [openNav, setOpenNav] = React.useState(false);
 
   React.useEffect(() => {
@@ -24,6 +31,9 @@ export default function NavBar({ auth }) {
         variant="small"
         color="blue-gray"
         className="p-1 font-normal"
+        placeholder={undefined}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
       >
         <a href="#" className="flex items-center">
           Pages
@@ -34,6 +44,9 @@ export default function NavBar({ auth }) {
         variant="small"
         color="blue-gray"
         className="p-1 font-normal"
+        placeholder={undefined}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
       >
         <a href="#" className="flex items-center">
           Account
@@ -44,6 +57,9 @@ export default function NavBar({ auth }) {
         variant="small"
         color="blue-gray"
         className="p-1 font-normal"
+        placeholder={undefined}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
       >
         <a href="#" className="flex items-center">
           Blocks
@@ -54,6 +70,9 @@ export default function NavBar({ auth }) {
         variant="small"
         color="blue-gray"
         className="p-1 font-normal"
+        placeholder={undefined}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
       >
         <a href="#" className="flex items-center">
           Docs
@@ -63,12 +82,20 @@ export default function NavBar({ auth }) {
   );
 
   return (
-    <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4">
+    <Navbar
+      className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4"
+      placeholder={undefined}
+      onPointerEnterCapture={undefined}
+      onPointerLeaveCapture={undefined}
+    >
       <div className="text-blue-gray-900 flex items-center justify-between">
         <Typography
           as="a"
           href="#"
           className="mr-4 cursor-pointer py-1.5 font-medium"
+          placeholder={undefined}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
         >
           Material Tailwind
         </Typography>
@@ -89,6 +116,9 @@ export default function NavBar({ auth }) {
                     variant="text"
                     size="sm"
                     className="hidden lg:inline-block"
+                    placeholder={undefined}
+                    onPointerEnterCapture={undefined}
+                    onPointerLeaveCapture={undefined}
                   >
                     <span>Log In</span>
                   </Button>
@@ -98,6 +128,9 @@ export default function NavBar({ auth }) {
                     variant="gradient"
                     size="sm"
                     className="hidden lg:inline-block"
+                    placeholder={undefined}
+                    onPointerEnterCapture={undefined}
+                    onPointerLeaveCapture={undefined}
                   >
                     <span>Register</span>
                   </Button>
@@ -110,6 +143,9 @@ export default function NavBar({ auth }) {
             className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
             ripple={false}
             onClick={() => setOpenNav(!openNav)}
+            placeholder={undefined}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
           >
             {openNav ? (
               <svg
